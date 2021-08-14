@@ -1,21 +1,21 @@
-import Vue from 'vue'
-import VueI18n from 'vue-i18n'
-import App from './App.vue'
-
+import Vue from "vue";
+import VueI18n from "vue-i18n";
+import App from "./App.vue";
+const BootstrapVue = require("bootstrap-vue");
+Vue.use(BootstrapVue);
 Vue.use(VueI18n);
 
-import {messages} from './main';
+import { messages } from "./main";
 
 window.i18n = new VueI18n({
-    locale: 'en',
-    messages
+  locale: "en",
+  messages,
 });
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    i18n,
-    template: '<App/>',
-    components: {App}
+  el: "#app",
+  i18n,
+  template: "<App/>",
+  components: { App },
 });
-
